@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>脂肪細胞ダイエット かんたん診断｜リエートクリニック</title>
+<style>
+:root{
+  --pri:#e0527a;      /* ローズ：選択・強調 */
+  --pri-d:#b8365c;
+  --pri-l:#fde8ee;
+  --navy:#2f3a5c;     /* 本文・ラベル */
+  --gold:#c9a24a;
+  --bg:#fbf0f3;
+  --card:#ffffff;
+  --sub:#7a7f93;
+  --bd:#f0d6de;
+  --w:480px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#e9e4e6;color:var(--navy);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;line-height:1.7;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%}
+ul{list-style:none}
+#wrap{max-width:var(--w);margin:0 auto;background:var(--bg);min-height:100vh;overflow:hidden}
+.is-hide{display:none!important}
+.reveal{animation:fadeUp .6s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ---------- ダミー画像（バナー・写真の差し替え枠） ---------- */
+.ph{position:relative;width:100%;background:repeating-linear-gradient(135deg,#f3e3e8 0 12px,#f8eef1 12px 24px);border:2px dashed #d9b3c0;display:flex;align-items:center;justify-content:center;text-align:center;color:#a2667a;font-size:13px;line-height:1.5;padding:12px}
+.ph b{display:block;font-size:11px;letter-spacing:.1em;color:#fff;background:#c58a9d;border-radius:99px;padding:1px 10px;margin:0 auto 6px;width:fit-content}
+.ph.photo{background:repeating-linear-gradient(135deg,#e8e8ee 0 12px,#f1f1f5 12px 24px);border-color:#c5c7d4;color:#6d7187}
+.ph.photo b{background:#8d91a8}
+
+/* ---------- FV ---------- */
+.fv{position:relative}
+.fv img{width:100%;height:auto}
+.full-img{margin:24px -16px 0}
+.full-img img{width:100%;height:auto}
+
+/* ---------- 設問エリア ---------- */
+.q-area{background:var(--card);border-radius:28px;margin:14px 12px;padding:8px 16px 18px;box-shadow:0 6px 24px rgba(224,82,122,.08)}
+.q-sec{padding-top:6px}
+.progress{display:flex;align-items:center;justify-content:center;margin:24px auto 6px}
+.progress li{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(225deg,#fde3ec,#f7d0dd);color:#d0688a;font:800 17px/1 "Helvetica Neue",Arial,sans-serif;flex-shrink:0}
+.progress li+li{position:relative;margin-left:34px}
+.progress li+li::after{content:"";position:absolute;right:calc(100% + 6px);top:50%;width:22px;height:6px;margin-top:-3px;background:radial-gradient(circle,#d3d3d8 2.6px,transparent 3px) 0 0/7.33px 6px repeat-x}
+.progress li.on{width:62px;height:62px;font-size:23px;color:#fff;background:linear-gradient(225deg,#f59ab5,#e0527a 55%,#c93d68);box-shadow:0 4px 12px rgba(224,82,122,.35)}
+.q-ttl{font-size:21px;line-height:1.55;font-weight:800;text-align:center;margin:16px 0 16px}
+.q-ttl .mk{background:linear-gradient(transparent 62%,#ffe08a 62%)}
+.q-ttl small{display:block;font-size:10px;font-weight:400;color:var(--sub);margin-top:6px;line-height:1.5}
+.caution{font-size:10px;line-height:1.6;color:var(--sub);text-align:right;margin:6px 0}
+.caution.l{text-align:left}
+
+.choices{margin:16px 0 4px;display:grid;gap:10px}
+.choices label{display:flex;align-items:center;gap:12px;border:2px solid var(--bd);border-radius:14px;padding:13px 14px;font-size:16px;font-weight:700;line-height:1.45;cursor:pointer;transition:.2s;background:#fff}
+.choices.yn{grid-template-columns:1fr 1fr}
+.choices.yn label{justify-content:center;font-size:18px;padding:15px 10px}
+.choices input{position:absolute;opacity:0;pointer-events:none}
+.choices .dot{flex-shrink:0;width:22px;height:22px;border:2px solid var(--navy);border-radius:50%;position:relative}
+.choices input:checked+label{border-color:var(--pri);background:var(--pri-l);color:var(--pri-d)}
+.choices input:checked+label .dot{border-color:var(--pri)}
+.choices input:checked+label .dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--pri)}
+.choices label:active{transform:scale(.98)}
+
+/* ---------- 解説ブロック（回答後に開く） ---------- */
+.block{margin:28px -16px 8px;padding:28px 18px;background:linear-gradient(180deg,#fff6f8,#fdeef2)}
+.lead-tag{display:block;width:fit-content;margin:0 auto 6px;font-size:13px;font-weight:700;color:#fff;background:var(--navy);padding:2px 14px;transform:rotate(-2deg)}
+.h-big{text-align:center;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:700;font-size:26px;line-height:1.4;color:var(--navy)}
+.h-big .red{color:var(--pri-d);font-size:1.15em}
+.h-mid{text-align:center;font-weight:800;font-size:19px;line-height:1.55;margin:22px 0 10px}
+.h-mid .red{color:var(--pri-d)}
+.txt{font-size:15px;line-height:1.85;margin:12px 0}
+.txt strong{color:var(--pri-d)}
+.mk{background:linear-gradient(transparent 62%,#ffe08a 62%)}
+.balloon{position:relative;background:#fff;border:2px solid var(--navy);border-radius:14px;padding:12px 14px;margin:16px 6px;font-weight:700;font-size:15px;text-align:center}
+.balloon::after{content:"";position:absolute;left:50%;bottom:-10px;width:16px;height:16px;background:#fff;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:translateX(-50%) rotate(45deg)}
+.arrow-down{width:2px;height:28px;background:var(--pri);margin:10px auto;position:relative}
+.arrow-down::after{content:"";position:absolute;left:50%;bottom:-2px;width:10px;height:10px;border-right:2px solid var(--pri);border-bottom:2px solid var(--pri);transform:translateX(-50%) rotate(45deg)}
+
+/* 脂肪細胞の比較図 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.cmp{background:#fff;border-radius:14px;padding:12px 8px 10px;text-align:center;border:2px solid var(--bd)}
+.cmp.good{border-color:var(--pri)}
+.cmp h4{font-size:13px;line-height:1.4;margin-bottom:6px}
+.cmp.good h4{color:var(--pri-d)}
+.cmp svg{width:100%;height:auto}
+.cmp p{font-size:12px;line-height:1.5;margin-top:4px;font-weight:700}
+.cmp .row-lbl{font-size:10px;color:var(--sub);font-weight:400}
+
+.point-list{display:grid;gap:8px;margin:14px 0}
+.point-list li{display:flex;gap:10px;align-items:flex-start;background:#fff;border-radius:12px;padding:12px;font-size:14px;line-height:1.6}
+.point-list .n{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--pri);color:#fff;font:700 13px/26px Georgia,serif;text-align:center}
+.point-list strong{color:var(--pri-d)}
+
+/* スライダー（施術紹介・症例） */
+.slider{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:16px -16px 0;padding:0 16px 6px;scrollbar-width:none}
+.slider::-webkit-scrollbar{display:none}
+.slide{flex:0 0 86%;scroll-snap-align:center}
+.menu-card{background:#fff;border-radius:16px;overflow:hidden;border:2px solid #f3c6d4;height:100%}
+.menu-card h3{background:linear-gradient(135deg,var(--pri),#f08aa6);color:#fff;text-align:center;font-size:18px;line-height:1.45;padding:12px 8px}
+.menu-card .ph{aspect-ratio:4/3;border:none}
+.menu-card .tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:12px 10px 0}
+.menu-card .tags span{font-size:12px;font-weight:700;color:var(--pri-d);background:var(--pri-l);border-radius:99px;padding:2px 10px}
+.menu-card p{font-size:13px;line-height:1.7;text-align:center;padding:10px 12px 14px}
+.menu-card p strong{color:var(--pri-d);font-size:14px}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.dots i{width:8px;height:8px;border-radius:50%;background:#ecd3db}
+.dots i.on{background:var(--pri)}
+
+.ba-slide .ph{aspect-ratio:750/882}
+img.ba-img{display:block;width:100%;height:auto;margin-top:16px}
+img.anim-img{display:block;width:100%;height:auto}
+
+.badge-row{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0}
+.badge{width:96px;height:96px;border-radius:50%;background:#fff;border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:11px;line-height:1.35;font-weight:700;color:#8a6a1c}
+.badge b{font-size:18px;color:var(--pri-d);line-height:1.2}
+
+.ph.mv{aspect-ratio:16/9;margin-top:14px}
+.ph.q-img{aspect-ratio:750/440}
+img.q-img{display:block;width:100%;height:auto;aspect-ratio:750/440;object-fit:cover;object-position:50% 40%}
+
+
+/* ---------- オファー ---------- */
+.offer .ph.thanks{aspect-ratio:750/732;border:none}
+.sec-ttl{text-align:center;font-size:20px;font-weight:800;margin:6px 0 14px}
+.sec-ttl small{display:block;font:700 12px Georgia,serif;letter-spacing:.25em;color:var(--pri)}
+.steps{display:grid;gap:12px;margin:10px 0 6px}
+.step{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#fff,#fff4f7);border:2px solid var(--bd);border-radius:16px;padding:14px}
+.step .no{flex-shrink:0;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--pri),#f08aa6);color:#fff;text-align:center;font:700 22px/1 Georgia,serif;display:flex;flex-direction:column;justify-content:center}
+.step .no small{font-size:9px;letter-spacing:.1em}
+.step p{font-size:15px;font-weight:700;line-height:1.55}
+.step p span{display:block;font-size:12px;font-weight:400;color:var(--sub)}
+
+.notice{background:#fff;border-radius:16px;overflow:hidden;margin:18px 0;border:2px solid var(--navy)}
+.notice .bar{height:14px;background:repeating-linear-gradient(135deg,#2f3a5c 0 10px,#f5c84b 10px 20px)}
+.notice h3{text-align:center;font-size:18px;margin:12px 0 4px}
+.notice p{font-size:13px;line-height:1.8;padding:0 16px 16px;text-align:center}
+.notice strong{color:var(--pri-d)}
+
+.cta{display:block;text-decoration:none;margin:20px 4px 10px;text-align:center}
+.cta .sub{display:inline-block;font-size:12px;font-weight:700;color:var(--pri-d);background:#fff;border:2px solid var(--pri);border-radius:99px;padding:2px 14px;margin-bottom:-12px;position:relative;z-index:1}
+.cta .btn{display:block;background:linear-gradient(180deg,#f0668d,var(--pri-d));color:#fff;border-radius:99px;padding:20px 12px 16px;font-size:21px;font-weight:900;line-height:1.35;box-shadow:0 6px 0 #8f2445,0 10px 20px rgba(184,54,92,.3);position:relative;overflow:hidden;animation:pulse 2.2s ease-in-out infinite}
+.cta .btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 2.8s ease-in-out infinite}
+.cta .btn small{display:block;font-size:12px;font-weight:700;opacity:.95}
+.cta .meta{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:12px;font-weight:700;color:var(--navy)}
+.cta .meta span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--pri);margin-right:5px;vertical-align:2px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+@keyframes shine{0%{left:-60%}60%,100%{left:130%}}
+
+.clinic{background:#fff;margin:14px 12px;border-radius:24px;padding:22px 16px}
+.clinic-list li{border-bottom:1px dashed var(--bd);padding:10px 2px;font-size:14px}
+.clinic-list li b{color:var(--pri-d);margin-right:6px}
+.clinic-list li span{display:block;font-size:12px;color:var(--sub)}
+
+.faq{margin:14px 12px;padding:22px 16px;background:#fff;border-radius:24px}
+.faq dl{margin-bottom:12px;border-radius:14px;overflow:hidden;border:2px solid var(--bd)}
+.faq dt{background:var(--pri-l);font-weight:800;font-size:15px;padding:12px 14px 12px 46px;position:relative;line-height:1.5}
+.faq dt::before{content:"Q";position:absolute;left:14px;top:8px;font:700 24px Georgia,serif;color:var(--pri)}
+.faq dd{font-size:13px;line-height:1.8;padding:12px 14px 12px 46px;position:relative}
+.faq dd::before{content:"A";position:absolute;left:15px;top:6px;font:700 22px Georgia,serif;color:var(--navy)}
+
+.ph.lastoffer{aspect-ratio:750/866;border:none}
+.foot-note{padding:14px 16px 40px;font-size:10px;line-height:1.7;color:var(--sub)}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+  <!-- FV -->
+  <div class="fv">
+    <img src="assets/fv.webp" alt="次世代医療ダイエット 月々9,600円〜が18ヶ月分0円" width="750" height="938" fetchpriority="high">
+  </div>
+
+  <div class="q-area">
+
+    <!-- Q1 -->
+    <section id="q1" class="q-sec">
+      <ul class="progress"><li class="on">Q1</li><li>Q2</li><li>Q3</li><li>Q4</li></ul>
+      <h2 class="q-ttl">食べても戻りにくい<br><span class="mk">“痩せやすい体”</span>を<br>目指してみたいですか？</h2>
+      <img class="q-img" src="assets/q1.jpg" alt="カフェでドーナツを頬張る女性" width="1500" height="844">
+      <p class="caution">※脂肪冷却により減少した脂肪細胞は再び増えにくいという意味です<br>※効果には個人差があります　※画像はイメージです</p>
+      <ul class="choices yn">
+        <li><input type="radio" name="q1" id="q1_1" data-next="#a1"><label for="q1_1"><i class="dot"></i>はい</label></li>
+        <li><input type="radio" name="q1" id="q1_2" data-next="#a1"><label for="q1_2"><i class="dot"></i>いいえ</label></li>
+      </ul>
+    </section>
+
+    <!-- Q1回答後：リバウンドの正体 -->
+    <div id="a1" class="is-hide">
+      <div class="full-img">
+        <img src="assets/a1-rebound.webp" alt="まだ誰も知らないリバウンドの本当の理由 本当の原因は脂肪細胞の数にあったんです" width="750" height="1125" loading="lazy">
+        <img src="assets/a1-shrink.webp" alt="運動や食事制限では脂肪細胞はしぼむだけ 数を減らすことはできない" width="750" height="970" loading="lazy">
+        <img src="assets/a1-approach.webp" alt="だから医療ダイエットは脂肪細胞に直接アプローチ リバウンドしにくい体を目指せる" width="750" height="938" loading="lazy">
+      </div>
+
+      <!-- Q2 -->
+      <section id="q2" class="q-sec">
+        <ul class="progress"><li>Q1</li><li class="on">Q2</li><li>Q3</li><li>Q4</li></ul>
+        <h2 class="q-ttl">理想の体になれたら<br>まず何をしてみたいですか？</h2>
+        <img class="ba-img" src="assets/q2-ba.jpg" alt="ビフォーアフター 65.2kg→43.1kg" width="1024" height="768">
+        <p class="caution">※施術内容・期間・回数・費用（自由診療）・主な副作用を記載（要確認）<br>※症例の母数・条件を記載（要確認）　※効果には個人差があります</p>
+        <ul class="choices">
+          <li><input type="radio" name="q2" id="q2_1" data-next="#a2"><label for="q2_1"><i class="dot"></i>着たかった服を自信をもって着たい</label></li>
+          <li><input type="radio" name="q2" id="q2_2" data-next="#a2"><label for="q2_2"><i class="dot"></i>食事の時間を我慢せず楽しみたい</label></li>
+          <li><input type="radio" name="q2" id="q2_3" data-next="#a2"><label for="q2_3"><i class="dot"></i>旅行や記念日の写真にたくさん写りたい</label></li>
+          <li><input type="radio" name="q2" id="q2_4" data-next="#a2"><label for="q2_4"><i class="dot"></i>毎日をもっと前向きに楽しみたい</label></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Q2回答後 -->
+    <div id="a2" class="is-hide">
+      <div class="block">
+        <span class="lead-tag">SNSでも話題</span>
+        <h3 class="h-big">“もう戻らない”を<br>実感する人が<span class="red">続々</span></h3>
+        <div class="ph mv"><div><b>MOVIE</b>成功者インタビュー / 施術動画（ループ）</div></div>
+        <p class="caution">※個人の感想です　※効果には個人差があります</p>
+      </div>
+
+      <!-- Q3 -->
+      <section id="q3" class="q-sec">
+        <ul class="progress"><li>Q1</li><li>Q2</li><li class="on">Q3</li><li>Q4</li></ul>
+        <h2 class="q-ttl">医療ダイエットで<br>いちばん惹かれるのはどれですか？</h2>
+        <img class="anim-img" src="assets/q3-cool.webp" alt="脂肪冷却の施術の様子" width="720" height="540">
+        <ul class="choices">
+          <li><input type="radio" name="q3" id="q3_1" data-next="#a3"><label for="q3_1"><i class="dot"></i>冷やすだけの切らない施術で、脂肪細胞から減らせる</label></li>
+          <li><input type="radio" name="q3" id="q3_2" data-next="#a3"><label for="q3_2"><i class="dot"></i>医師が処方する薬で、食欲を無理なく整えられる</label></li>
+          <li><input type="radio" name="q3" id="q3_3" data-next="#a3"><label for="q3_3"><i class="dot"></i>戻りにくい体をつくって、ダイエットを最後にできる</label></li>
+        </ul>
+        <p class="caution">※効果には個人差があります</p>
+      </section>
+    </div>
+
+    <!-- Q3回答後：韓国発・脂肪細胞ダイエット -->
+    <div id="a3" class="is-hide">
+      <div class="block">
+        <span class="lead-tag">美容先進国・韓国発</span>
+        <h3 class="h-big">いま話題の<br><span class="red">「脂肪細胞ダイエット」</span></h3>
+        <p class="txt">その中心になっているのが、韓国発の医療用脂肪冷却機器<strong>「CLATUU α」</strong>。脂肪細胞だけを冷やしてアプローチする方法は、<span class="mk">ハーバード医科大学などの研究者</span>によって報告された科学的なアプローチです。</p>
+        <div class="badge-row">
+          <div class="badge">1回の施術で<b>約20%</b>脂肪減少の目安※</div>
+          <div class="badge">施術時間<b>約30分</b>寝ているだけ</div>
+          <div class="badge">メスを<b>使わない</b>切らない施術</div>
+        </div>
+        <p class="caution">※1回の施術で約20%の脂肪減少を目安とする研究報告に基づく　※効果には個人差があります</p>
+        <ul class="point-list">
+          <li><span class="n">1</span><div><strong>ホテルのような院内</strong><br>病院っぽさのない落ち着いた空間で、初めてでも安心。</div></li>
+          <li><span class="n">2</span><div><strong>まずは丁寧なカウンセリング</strong><br>いきなり施術はしません。太りやすい原因から一緒に整理します。</div></li>
+          <li><span class="n">3</span><div><strong>痛みに配慮した施術</strong><br>「ひんやりする」程度。スマホを見ている間に終わります。</div></li>
+        </ul>
+        <p class="caution">※感じ方には個人差があります</p>
+      </div>
+
+      <!-- Q4 -->
+      <section id="q4" class="q-sec">
+        <ul class="progress"><li>Q1</li><li>Q2</li><li>Q3</li><li class="on">Q4</li></ul>
+        <h2 class="q-ttl">18ヶ月分0円の<br>医療ダイエットの<br><span class="mk">無料カウンセリング</span>を<br>受けてみたいですか？</h2>
+        <img class="anim-img" src="assets/q4-clinic.webp" alt="Lieto Clinic 院内受付の様子" width="720" height="540">
+        <ul class="choices yn">
+          <li><input type="radio" name="q4" id="q4_1" data-next="#offer"><label for="q4_1"><i class="dot"></i>はい</label></li>
+          <li><input type="radio" name="q4" id="q4_2" data-next="#offer"><label for="q4_2"><i class="dot"></i>いいえ</label></li>
+        </ul>
+      </section>
+    </div>
+
+  </div><!-- /.q-area -->
+
+  <!-- オファー -->
+  <div id="offer" class="offer is-hide">
+    <div class="ph thanks"><div><b>BANNER</b>回答ありがとうございました<br>＋18ヶ月分0円 当選チケット</div></div>
+
+    <div class="q-area">
+      <h2 class="sec-ttl"><small>3 STEPS</small>ご予約までのかんたん3ステップ</h2>
+      <div class="steps">
+        <div class="step"><div class="no"><small>STEP</small>01</div><p>下のボタンから<br>WEB予約ページへ<span>当選チケットは自動で適用されます</span></p></div>
+        <div class="step"><div class="no"><small>STEP</small>02</div><p>ご希望の院と<br>日時を選ぶ</p></div>
+        <div class="step"><div class="no"><small>STEP</small>03</div><p>お名前・電話番号を<br>入力して完了<span>入力は約3分</span></p></div>
+      </div>
+
+      <div class="notice">
+        <div class="bar"></div>
+        <h3>無断キャンセルにご注意ください</h3>
+        <p>ご予約後、クリニックから確認のご連絡をいたします。<br><strong>無断キャンセルの場合、今後キャンペーンをご利用いただけない</strong>ことがあります。<br>ご都合が悪くなった際は、事前にご連絡ください。</p>
+        <div class="bar"></div>
+      </div>
+
+      <a href="#" class="cta js-cta">
+        <span class="sub">各院 先着枠に限りあり</span>
+        <span class="btn">当選チケットを使って<br>無料カウンセリング予約<small>18ヶ月分0円※の特典つき</small></span>
+        <span class="meta"><span>WEB予約 約3分</span><span>カウンセリング無料</span></span>
+      </a>
+    </div>
+
+    <div class="clinic">
+      <h2 class="sec-ttl"><small>CLINIC</small>クリニック一覧</h2>
+      <ul class="clinic-list">
+        <li><b>〇〇院</b>院名（要入力）<span>住所・最寄り駅からの所要時間（要入力）</span></li>
+        <li><b>〇〇院</b>院名（要入力）<span>住所・最寄り駅からの所要時間（要入力）</span></li>
+      </ul>
+    </div>
+
+    <div class="faq">
+      <h2 class="sec-ttl"><small>FAQ</small>よくあるご質問</h2>
+      <dl><dt>予約はどうすればいいですか？</dt><dd>このページのボタンからWEB予約ページへ進み、ご希望の院・日時とお名前・電話番号を入力するだけです。約3分で完了します。</dd></dl>
+      <dl><dt>予約した日時は変更できますか？</dt><dd>はい、変更できます。クリニックまでご連絡ください。日程を変更しても、ご予約時のキャンペーン内容はそのまま適用されます。</dd></dl>
+      <dl><dt>カウンセリングだけでも大丈夫ですか？</dt><dd>もちろん大丈夫です。施術を受けるかどうかは、カウンセリングで内容と費用をご確認いただいてからお決めください。</dd></dl>
+    </div>
+
+    <div class="ph lastoffer"><div><b>BANNER</b>WEB予約限定クーポン（ラストオファー）</div></div>
+
+    <div style="padding:0 12px">
+      <a href="#" class="cta js-cta">
+        <span class="sub">今月の条件で予約できるのは今だけ</span>
+        <span class="btn">当選チケットを使って<br>無料カウンセリング予約<small>18ヶ月分0円※の特典つき</small></span>
+        <span class="meta"><span>WEB予約 約3分</span><span>カウンセリング無料</span></span>
+      </a>
+    </div>
+
+    <p class="foot-note">※施術を受けられない方：BMI・年齢・既往歴・妊娠中など（要確認・記載）<br>※自由診療：料金・主な副作用・未承認医薬品等に関する表記（要確認・記載）<br>※18ヶ月分0円の適用条件（要確認・記載）<br>※効果には個人差があります。</p>
+  </div>
+
+</div><!-- /#wrap -->
+
+<script>
+(function(){
+  // 当月を表示
+  var m = new Date().getMonth()+1;
+  document.querySelectorAll('.js-month').forEach(function(el){ el.textContent = m; });
+
+  // 回答すると次のブロックを開いてスクロール
+  document.querySelectorAll('.choices input').forEach(function(input){
+    input.addEventListener('change', function(){
+      var next = document.querySelector(input.dataset.next);
+      if(!next) return;
+      if(next.classList.contains('is-hide')){
+        next.classList.remove('is-hide');
+        next.classList.add('reveal');
+      }
+      setTimeout(function(){
+        var y = next.getBoundingClientRect().top + window.pageYOffset - 8;
+        window.scrollTo({top:y, behavior:'smooth'});
+      }, 250);
+    });
+  });
+
+  // スライダーのドット連動
+  document.querySelectorAll('.js-slider').forEach(function(sl){
+    var dots = sl.nextElementSibling;
+    if(!dots || !dots.classList.contains('js-dots')) return;
+    sl.addEventListener('scroll', function(){
+      var slides = sl.querySelectorAll('.slide');
+      var idx = Math.round(sl.scrollLeft / (slides[0].offsetWidth + 10));
+      dots.querySelectorAll('i').forEach(function(d,i){ d.classList.toggle('on', i === idx); });
+    }, {passive:true});
+  });
+
+  // CTA：遷移先未設定。URLパラメータ（utm_source 等）を引き継ぐ
+  var CTA_URL = '';  // ← 予約ページのURLを入れる
+  var params = new URLSearchParams(location.search).toString();
+  document.querySelectorAll('.js-cta').forEach(function(a){
+    if(CTA_URL){ a.href = CTA_URL + (params ? (CTA_URL.indexOf('?')<0?'?':'&') + params : ''); }
+  });
+})();
+</script>
+</body>
+</html>
