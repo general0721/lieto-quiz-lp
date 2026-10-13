@@ -147,6 +147,8 @@ img.q-img{display:block;width:100%;height:auto;aspect-ratio:750/440;object-fit:c
 .cta .btn{display:block;background:linear-gradient(180deg,#f0668d,var(--pri-d));color:#fff;border-radius:99px;padding:20px 12px 16px;font-size:21px;font-weight:900;line-height:1.35;box-shadow:0 6px 0 #8f2445,0 10px 20px rgba(184,54,92,.3);position:relative;overflow:hidden;animation:pulse 2.2s ease-in-out infinite}
 .cta .btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 2.8s ease-in-out infinite}
 .cta .btn small{display:block;font-size:12px;font-weight:700;opacity:.95}
+.coupon-msg{text-align:center;font-weight:800;font-size:20px;line-height:1.5;color:var(--navy);padding:22px 12px 14px}
+.coupon-msg span{font-size:24px;color:var(--pri-d)}
 .cta .meta{display:flex;justify-content:center;gap:14px;margin-top:14px;font-size:12px;font-weight:700;color:var(--navy)}
 .cta .meta span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--pri);margin-right:5px;vertical-align:2px}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
@@ -257,6 +259,7 @@ img.q-img{display:block;width:100%;height:auto;aspect-ratio:750/440;object-fit:c
 
   <!-- オファー -->
   <div id="offer" class="offer is-hide">
+    <p class="coupon-msg">おめでとうございます！<br><span>クーポンが発行されました！</span></p>
     <img class="offer-thanks" src="assets/offer-thanks.webp" alt="アンケート回答ありがとうございました！ 月々9,600円〜が18ヶ月分0円" width="750" height="562">
     <img class="offer-thanks" src="assets/offer-campaign.webp" alt="新店舗オープン記念 特別モニター様限定価格 最大80%OFF／アンケートご回答者様限定 50,000円OFF／店舗ご来店特典 Amazonギフト券5,000円分／58kg以上の女性限定 さらに10万円OFF／脂肪買取キャンペーン 1kg=1万円で買取" width="750" height="1000" loading="lazy">
 
@@ -266,7 +269,7 @@ img.q-img{display:block;width:100%;height:auto;aspect-ratio:750/440;object-fit:c
       </div>
 
       <a href="#" class="cta js-cta">
-        <span class="meta"><span>WEB予約 約3分</span><span>カウンセリング無料</span></span>
+        <span class="btn">当選チケットを使って<br>無料カウンセリング予約<small>18ヶ月分0円※の特典つき</small></span>
       </a>
     </div>
 
